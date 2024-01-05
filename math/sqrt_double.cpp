@@ -13,9 +13,12 @@
 /** Bisection method implemented for the function \f$x^2-a=0\f$
  * whose roots are \f$\pm\sqrt{a}\f$ and only the positive root is returned.
  */
-double Sqrt(double a) {
-    if (a > 0 && a < 1) {
-        return 1 / Sqrt(1 / a);
+double
+Sqrt (double a)
+{
+    if (a > 0 && a < 1)
+    {
+        return 1 / Sqrt (1 / a);
     }
     double l = 0, r = a;
     /* Epsilon is the precision.
@@ -24,12 +27,17 @@ double Sqrt(double a) {
     double epsilon = 1e-12;
     */
     double epsilon = 1e-12;
-    while (l <= r) {
+    while (l <= r)
+    {
         double mid = (l + r) / 2;
-        if (mid * mid > a) {
+        if (mid * mid > a)
+        {
             r = mid;
-        } else {
-            if (a - mid * mid < epsilon) {
+        }
+        else
+        {
+            if (a - mid * mid < epsilon)
+            {
                 return mid;
             }
             l = mid;
@@ -39,11 +47,17 @@ double Sqrt(double a) {
 }
 
 /** main function */
-int main() {
+int
+main ()
+{
     double n{};
-    std::cin >> n;
-    assert(n >= 0);
+    // std::cin >> n;
+    n = 8;
+    assert (n >= 0);
     // Change this line for a better precision
-    std::cout.precision(12);
-    std::cout << std::fixed << Sqrt(n);
+    std::cout.precision (12);
+    std::cout << std::fixed << Sqrt (n) << std::endl;
+    std::cout << std::oct << 80 << std::endl;
+    std::cout << std::hex << 80 << std::endl;
+    std::cout << std::binary << 80 << std::endl;
 }

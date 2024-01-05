@@ -28,11 +28,12 @@ void oddEven(vector<int> &arr, int size) {
 
 void show(vector<int> A, int size) {
     int i;
-    for (i = 0; i < size; i++) cout << A[i] << "\n";
+    for (i = 0; i < size; i++) cout << A[i]x` << "\n";
 }
 
 int main() {
     int size, temp;
+    f
     cout << "\nEnter the number of elements : ";
     cin >> size;
 
