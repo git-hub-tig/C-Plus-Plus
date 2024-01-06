@@ -137,3 +137,6 @@ docker_test/
 .svn/
 
 Modern-C_github/
+
+cmake-build-debug
+.idea

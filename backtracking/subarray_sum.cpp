@@ -46,7 +46,7 @@ namespace backtracking
             int64_t current_sum = 0;
             std::unordered_map<int64_t, int64_t>
                 sumarray; // to store the subarrays count
-                          // frequency having some sum value
+                          // frequency having some sum value // wqs, same sum value
 
             for (int64_t i = 0; i < nelement; i++)
             {
@@ -61,6 +61,7 @@ namespace backtracking
                 {
                     count_of_subset += (sumarray[current_sum - sum]);
                 }
+                // wqs, the core that accumulated sum is recorded
                 sumarray[current_sum]++;
             }
             return count_of_subset;
